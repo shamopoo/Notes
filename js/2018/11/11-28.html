@@ -1,0 +1,98 @@
+
+
+何时发生重排？
+1.   添加或者删除可见的dom
+2.  元素的位置改变
+3.  元素的尺寸改变
+4.  元素的内容改变
+5.  页面渲染初始化
+6.  浏览器窗口尺寸改变
+<script>
+/*
+ * @Author: shamopoo 
+ * @Date: 2018-11-28 10:15:53 
+ * @Last Modified by: shamopoo
+ * @Last Modified time: 2018-11-28 15:08:49
+ */
+  // 没三位加,
+  //  适用于有或者没有小数的数字
+  function numAddComma (num) {
+        return num.toLocalString()
+  }
+  // 适用于无小数的数字
+  function numberAddComma (num) {
+        return num.replace(/(\d)(?=(?:\d{3})+$)/g,  '$1,')
+  }
+ 
+  var number = 50
+  var obj  = {
+      number: 60,
+      getNum: function () {
+         var number = 50
+         return this.number
+      }
+  }
+  console.log(obj.getNum())  // 60
+  console.log(obj.getNum.call()) // 50
+  console.log(obj.getNum.call({number: 20})) // 20
+
+  var users = [
+    { 'user': 'barney',  'age': 36, 'active': true },
+    { 'user': 'fred',    'age': 40, 'active': false },
+    { 'user': 'pebbles', 'age': 1,  'active': true }
+  ]
+  users.find(o => o.age > 30) // barney
+
+
+   // 数组展平
+   function flattenDeep (arr) {
+      return Array.isArray(arr) 
+                  ? arr.reduce((a, c) => a.concat(flattenDeep(c) ), [])
+                  : [arr]
+   }
+  console.log(flattenDeep([1, [[2], [3, [4]], 5]]))
+
+
+    //  数组转对象
+    //const fromPairs = arr => arr.reduce((a, c) => (a[c[0]] = c[1] , a), {})
+    const fromPairs = function (arr) {
+        return arr.reduce((a,c) => {
+            a[c[0]] = c[1]
+            return a
+          }, {})
+    }
+    console.log(fromPairs([['a', 1], ['b', 2]]))
+
+    //const grouped =  ['one', 'two', 'three'].reduce( (a,c) => ((a[v.length] || (a[v.length] = [])).push(c), a),  {}) 
+    const grouped = function (arr) {
+        return  arr.reduce((a, v) => {
+            (a[v.length] || (a[v.length] = [])).push(v)
+            return a
+        }, {})
+    }
+    console.log(grouped(['one', 'two', 'three']))
+    // output: {3: ["one", "two"], 5: ["three"]}
+
+    // bind
+    Function.prototype.bind = function(t) {
+        var args = Array.prototype.slice(arguments, 1),
+              self = this
+              return function () {
+                    return self.call(t, args.concat(Array.prototype.slice(arguments)))
+              }
+    }
+
+    // trim 
+    function trim (str) {
+      return str.replace(/(^\s*)|(\s*$)/g, '')
+    }
+    // /s 表示空格
+
+    // * 这个代表重复0次或者更多次
+
+    // +这个代表重复1次或者更多次
+
+    // ?这个代表重复0次或者1次
+    console.log(trim('     a b c    '))
+    // output: 'abc' 
+</script>

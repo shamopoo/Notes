@@ -1,0 +1,61 @@
+
+<script>
+/*
+ * @Author: shamopoo 
+ * @Date: 2018-11-29 10:02:23 
+ * @Last Modified by: shamopoo
+ * @Last Modified time: 2018-11-29 10:45:04
+ */
+    var num = 1;
+    var myObject = {
+        num: 2,
+        add: function() {
+            this.num = 3;
+            (function() {
+                // 立即执行函数和闭包的this指向windows
+                console.log(this.num);
+                this.num = 4;
+            })();
+            console.log(this.num);
+        },
+        sub: function() {
+            console.log(this.num)
+        }
+    }
+    //  闭包的this指向window
+    myObject.add(); // 3 1
+    console.log(myObject.num); // 3
+    console.log(num); // 4
+    // 赋值后 sub 的this指向Windows
+    var sub = myObject.sub;
+    sub.call(); // 4
+
+    // debounce防抖
+    function debounce (fn, delay) {
+        var self = this,
+              args = arguments
+              return function () {
+                    clearTimeout(fn.id)
+                    fn.id = setTimeout( function () {
+                        fn.call(self, args)
+                    }, dealy || 500)
+              }
+    }
+
+    // throttle 节流
+    function throttle (fn, delay) {
+        var slef = this,
+              timer = null,
+              args = arguments;
+              isImmediately = true
+              if (isImmediately) {
+                  fn.call(slef, args)
+                  isImmediately = false
+              }
+              if (timer) {clearTimeout(timer)}
+              timer = setTimeout(function () {
+                  timer = null
+                  fn.call(self, args)
+              }, delay || 500)
+    }
+</script>
