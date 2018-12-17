@@ -337,4 +337,22 @@ table.fullwidth-table td {
      console.log(str.split('').map(v => {
        return /\d$/.test(v) ? v * 2 : v
      }).join(''))
+
+     // 
+     var x = 5, 
+          y = 'abc'
+      function outFun () {
+        var x =  10,
+              y   =  'xyz'
+        function innerFun () {
+              x = 20
+              var y = 'faasd'
+        }      
+        innerFun()
+        console.log(x)
+        console.log(y)
+      }    
+      outFun() //  20 xyz
+      console.log(x) // 5
+      console.log(y) // abc
 </script>
