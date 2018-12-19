@@ -1,0 +1,85 @@
+<script>
+
+  // 884
+/**
+ * @param {string} S
+ * @param {string} T
+ * @return {boolean}
+ */
+ var backspaceCompare = function(S, T) {
+    let s = [],
+        t = []
+    for(var i  = 0; i < S.length; i++) {
+        if (S[i] !== '#') {
+            s.push(S[i])
+        } else {
+            s.length > 0 && s.pop()
+        }
+    }
+    for(var j  = 0; j < T.length; j++) {
+        if (T[j] !== '#') {
+            t.push(T[j])
+        } else {
+            t.length > 0 && t.pop()
+        }
+    }
+    return s.join('') === t.join('')
+};
+
+backspaceCompare("ab#c", "ad#c")
+
+
+
+// 136
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+ var singleNumber = function(nums) {
+    return nums.filter(v =>  nums.indexOf(v) === nums.lastIndexOf(v))
+};
+
+singleNumber([1,2,3,4,2,1,4])
+
+
+///20
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+ var isValid = function(s) {
+    const stack = []
+    for (var i = 0; i < s.length; i++) {
+        if (['(', '[', '{'].includes(s[i])) {
+            stack.push(s[i])
+        } else {
+            if (stack.length === 0) return false
+            let c = stack.pop()
+            if(c === '(' && s[i] !== ')') return false
+            if(c === '[' && s[i] !== ']') return false
+            if(c === '{' && s[i] !== '}') return false
+        }
+    }
+    return  !stack.length
+};
+isValid("()[{}}}]{}")
+
+//268
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+ var missingNumber = function(nums) {
+    let max = Math.max(...nums),
+        sum1 = 0,
+        sum2 = 0
+    for(var i = 0; i <= max; i++) {
+        sum1 += i
+    }  
+    for(var j = 0; j < nums.length; j++) {
+        sum2 += nums[j]
+    }  
+    return sum1 - sum2
+};
+console.log(missingNumber([3,0,1]))
+</script>
