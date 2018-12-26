@@ -526,14 +526,22 @@ Promise和setTimeout的区别（Event Loop）
     // input: 10  变量定义时已经决定了其作用域
 
     // 2 原型链
-   Object.prototype.a = 'a'
+    Object.prototype.a = 'a'
     Function.prototype.a = 'a1'
     //person.prototype.a = 'a2'
     function person () {}
     var peter = new person()
     console.log(peter.a) // 'a'
     // peter =>   peter.prototype => Object.prototype
+    var foo = {},
+    F = function(){};
+    Object.prototype.a = 'value a';
+    Function.prototype.b = 'value b';
 
+    console.log(foo.a)   // a
+    console.log(foo.b)     // underfind
+    console.log(F.a)      // a
+    console.log(F.b)  // b
     //
     var y = 10,
           foo2

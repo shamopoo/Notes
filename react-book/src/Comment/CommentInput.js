@@ -15,7 +15,7 @@ class CommentInput extends Component {
      this.state = {
         username: props.username,
         content: '',
-        wordCounter: 100
+        wordCounter: 1000
      }
   }
   componentDidMount () {
@@ -39,7 +39,7 @@ class CommentInput extends Component {
     this.refs.textarea.style.height =  this.refs.textarea.scrollHeight + "px";
     this.setState({
         content: e.target.value,
-        wordCounter: 100 - e.target.value.length
+        wordCounter: 1000 - e.target.value.length
     })
   }
   handleSubmit () {
@@ -50,7 +50,11 @@ class CommentInput extends Component {
             createdTime:  Math.floor(+Date.now()  / 1000)
         })
      }
-     this.setState({content: ''})
+     this.setState({
+          content: '',
+          wordCounter: 1000
+      })
+      this.refs.textarea.style.height =  "40px";
   }
   render () {
     return (
@@ -69,13 +73,13 @@ class CommentInput extends Component {
             <span className='comment-field-name'>评论内容：</span>
             <div className='comment-field-input'>
               <textarea 
-                  maxLength='100'
+                  maxLength='1000'
                   ref="textarea" 
                   value={this.state.content}
                   onChange={this.handleContentChange.bind(this)} />
             </div>
           </div>
-          <div className='word-counter'>{this.state.wordCounter} / 100</div>
+          <div className='word-counter'>{this.state.wordCounter} / 1000</div>
           <div className='comment-field-button'>
             <button onClick={this.handleSubmit.bind(this)}>
               发布
