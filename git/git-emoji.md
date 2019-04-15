@@ -34,4 +34,5 @@
 - 🔒 security: 提高代码的安全性 :lock:
 
 
-more:https://gitmoji.carloscuesta.me/
+# more:
+- https://gitmoji.carloscuesta.me/
