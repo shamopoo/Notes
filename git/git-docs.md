@@ -1,64 +1,79 @@
 # GIT 指令速查表
 
-### 解决冲突
+## 解决冲突
 ```
 $ git pull —rebase    // commit 后
 $ git rebase —continue // add后commit前
 ```
-# 创建
+## 创建
 
-复制一个已建的仓库
+### 复制一个已建的仓库
+```
 $ git clone ssh://use@xxx.com/repo.git
-
-创建一个新的本地仓库
+```
+### 创建一个新的本地仓库
+```
 $ git init
- 
-本地修改
+``` 
+## 本地修改
 
-    显示工作路径下全部修改的文件
-    $ git status
+### 显示工作路径下全部修改的文件
+```
+$ git status
+```
 
-    显示与上次提交版本文件的不同
-    $ git diff
+### 显示与上次提交版本文件的不同
+```
+$ git diff
+```
+### 把当前所有修改添加到下次提交中
+```
+$ git add .
+```
 
-    把当前所有修改添加到下次提交中
-   $ git add .
+### 制定某个文件的修改添加到下次提交中
+```
+$ git add -p <file>
+```
 
-   制定某个文件的修改添加到下次提交中
-   $ git add -p <file>
+### 提交本地的所有修改
+$ git commit -a
 
-   提交本地的所有修改
-   $ git commit -a
+### 提交之前已经标记的变化
+```
+$ git commit
+```
+### 提交之前已标记的变化
+```
+$ git commit
+```
 
-   提交之前已经标记的变化
-   $ git commit
-
-   提交之前已标记的变化
-   $ git commit
-
-提交历史
+## 提交历史
    
-    从最新提交开始显示所有的提交记录
-    $ git log
+### 从最新提交开始显示所有的提交记录
+```
+$ git log
+```
 
-    显示制定文件的所有文件
-    $ git log -p <file>
+### 显示制定文件的所有文件
+```
+ $ git log -p <file>
+ ```
 
-    谁，在什么时间，修改了文件的什么内容
-    $ git blame  <file>
-
+### 谁，在什么时间，修改了文件的什么内容
+```
+$ git blame  <file>
+```
 分支与标签
-     显示所有分支
-     $ git branch -a
-
-     切换当前分支
-     $ git checkout <branch>
-
-     创建新分支
-     基于当前分支
-     $ git branch  <new branch>
+ 显示所有分支
+ $ git branch -a
+切换当前分支
+$ git checkout <branch>
+创建新分支
+基于当前分支
+$ git branch  <new branch>
     
-    创建新的可追溯的分支
+创建新的可追溯的分支
     基于远程分支
     $ git checkout  —track  <remote/branch>
      删除本地分支
