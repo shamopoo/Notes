@@ -1,15 +1,17 @@
-GIT 指令速查表
+# GIT 指令速查表
 
 ### 解决冲突
+```
 $ git pull —rebase    // commit 后
 $ git rebase —continue // add后commit前
-创建
+```
+# 创建
 
-    复制一个已建的仓库
-    $ git clone ssh://use@xxx.com/repo.git
+复制一个已建的仓库
+$ git clone ssh://use@xxx.com/repo.git
 
-    创建一个新的本地仓库
-    $ git init
+创建一个新的本地仓库
+$ git init
  
 本地修改
 
