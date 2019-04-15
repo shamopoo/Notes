@@ -9,8 +9,6 @@
 - chore：构建过程或辅助工具的变动
 
 
-# git emoji
-
 ## 开发
 
 - ⭐️ new feature: add some files 增加新功能比如新增某个模块 :star:
