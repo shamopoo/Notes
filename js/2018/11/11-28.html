@@ -7,12 +7,8 @@
 4.  元素的内容改变
 5.  页面渲染初始化
 6.  浏览器窗口尺寸改变
-<script>
-/*
- * @Author: shamopoo 
- * @Date: 2018-11-28 10:15:53 
- * @Last Modified by: shamopoo
- * @Last Modified time: 2018-11-28 15:08:49
+
+``` javascript
  */
   // 没三位加,
   //  适用于有或者没有小数的数字
@@ -23,7 +19,9 @@
   function numberAddComma (num) {
         return num.replace(/(\d)(?=(?:\d{3})+$)/g,  '$1,')
   }
-  
+```
+
+``` javascript
   var number = 50
   var obj  = {
       number: 60,
@@ -35,7 +33,10 @@
   console.log(obj.getNum())  // 60
   console.log(obj.getNum.call()) // 50
   console.log(obj.getNum.call({number: 20})) // 20
+```
 
+
+``` javascript
   var users = [
     { 'user': 'barney',  'age': 36, 'active': true },
     { 'user': 'fred',    'age': 40, 'active': false },
@@ -43,7 +44,11 @@
   ]
   users.find(o => o.age > 30) // barney
 
+```
 
+
+
+``` javascript
    // 数组展平
    function flattenDeep (arr) {
       return Array.isArray(arr) 
@@ -51,7 +56,10 @@
                   : [arr]
    }
   console.log(flattenDeep([1, [[2], [3, [4]], 5]]))
+```
 
+
+``` javascript
 
     //  数组转对象
     //const fromPairs = arr => arr.reduce((a, c) => (a[c[0]] = c[1] , a), {})
@@ -62,7 +70,9 @@
           }, {})
     }
     console.log(fromPairs([['a', 1], ['b', 2]]))
+```
 
+``` javascript
     //const grouped =  ['one', 'two', 'three'].reduce( (a,c) => ((a[v.length] || (a[v.length] = [])).push(c), a),  {}) 
     const grouped = function (arr) {
         return  arr.reduce((a, v) => {
@@ -72,7 +82,10 @@
     }
     console.log(grouped(['one', 'two', 'three']))
     // output: {3: ["one", "two"], 5: ["three"]}
+```
 
+
+``` javascript
     // bind
     Function.prototype.bind = function(t) {
         var args = Array.prototype.slice(arguments, 1),
@@ -81,7 +94,10 @@
                     return self.call(t, args.concat(Array.prototype.slice(arguments)))
               }
     }
+```
 
+
+``` javascript
     // trim 
     function trim (str) {
       return str.replace(/(^\s*)|(\s*$)/g, '')
@@ -95,4 +111,4 @@
     // ?这个代表重复0次或者1次
     console.log(trim('     a b c    '))
     // output: 'abc' 
-</script>
+```
