@@ -11,25 +11,25 @@
 
 ## 开发
 
-- ⭐️ new feature: add some files 增加新功能比如新增某个模块 :star:
-- 🎨 UI update: 界面样式相关更新 :art:
-- 🔥 API change: change some API 重大更新提示，比如修改字段等 :fire:
-- 👕 refactor: 包括文件代码结构以及代码风格的重构 :shirt:
-- 🔨 refactor: 包括文件代码结构以及代码风格的重构 :hammer:
-- 🚀 improvement: 重大改进，提升性能如修改某个方法或算法 :rocket:
+- ⭐️ new feature: add some files 增加新功能比如新增某个模块 : star :
+- 🎨 UI update: 界面样式相关更新 : art :
+- 🔥 API change: change some API 重大更新提示，比如修改字段等 : fire :
+- 👕 refactor: 包括文件代码结构以及代码风格的重构 : shirt :
+- 🔨 refactor: 包括文件代码结构以及代码风格的重构 : hammer :
+- 🚀 improvement: 重大改进，提升性能如修改某个方法或算法 : rocket :
 
 # Bug
 
-- 🐛 bugfix: fix some bug :bug:
-- 🐞 bugfix: fix some bug :beetle:
-- 🚑 hotfix: fix some online bug :ambulance:
+- 🐛 bugfix: fix some bug : bug :
+- 🐞 bugfix: fix some bug : beetle :
+- 🚑 hotfix: fix some online bug : ambulance :
 
 # 其他
 
-- 🔧 config: 修改配置文件 :wrench:
-- 📝 docs: 添加文档说明 :memo:
-- ✅ test: 添加测试用例 :white_check_mark:
-- 🔒 security: 提高代码的安全性 :lock:
+- 🔧 config: 修改配置文件 : wrench :
+- 📝 docs: 添加文档说明 : memo :
+- ✅ test: 添加测试用例 : white_check_mark :
+- 🔒 security: 提高代码的安全性 : lock :
 
 
 # more:
