@@ -1,25 +1,33 @@
-# 笔记
+# Notes
+> 个人笔记，记录当下。
+1. Javascrit
+2. Python
+3. Git
+4. Linux
+5. 
 
-*> 个人笔记，记录当下。*
-
-## javascrit
+## Javascrit
 
 Update...
 
-## python
+## Python
 
 Update...
 
-## git
+## Git
 
 -  [GIT 指令速查表](https://github.com/shamopoo/Notes/tree/master/git/git-docs.md)
 -  [GIT 提交规范文档](https://github.com/shamopoo/Notes/tree/master/git/git-emoji.md)
 
-## linux
+## Linux
 
 Update...
 
-## leetcode
+## Cesium
+
+-  [CesiumJs入门](https://github.com/shamopoo/Notes/blob/master/cesium/cesium.md)
+
+## Leetcode
 
 - [5011](https://github.com/shamopoo/Notes/blob/master/leetcode/5011.md)
 - [查看更多](https://github.com/shamopoo/Notes/blob/master/leetcode)
