@@ -105,10 +105,10 @@ ssh-rsa AAAAB3Nkm2ds
   - -r:   复制目录
   - -p:  保留文件属性
 
-  ```kotlin
-  cp /root/id_rsa.pub /Users/rsa.pub 
-  //root目录下的id_rsa.pub文件复制到Users目录下,并且改名为rsa.pub
-  ```
+```kotlin
+cp /root/id_rsa.pub /Users/rsa.pub 
+//root目录下的id_rsa.pub文件复制到Users目录下,并且改名为rsa.pub
+```
 
 
 
