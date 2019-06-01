@@ -16,7 +16,11 @@ Update...
 
 # Linux
 
-Update...
+- [Linux 常用基本命令](https://github.com/shamopoo/Notes/blob/master/Linux/linux-docs.md)
+
+# Vim
+
+update...
 
 # Cesium
 
