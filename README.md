@@ -3,7 +3,7 @@
 
 # Javascrit
 
--  [js实现sleep功能](https://github.com/shamopoo/)
+-  [js实现sleep功能](https://github.com/shamopoo/Notes/blob/master/Javascrit/sleep.md)
 
 # Python
 
