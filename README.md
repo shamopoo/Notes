@@ -3,7 +3,7 @@
 
 # Javascrit
 
-Update...
+-  [js实现sleep功能](https://github.com/shamopoo/)
 
 # Python
 
