@@ -20,7 +20,7 @@ Update...
 
 # Vim
 
-update...
+- [Vim 常用基本命令](https://github.com/shamopoo/Notes/blob/master/Vim/docs.md)
 
 # Cesium
 
