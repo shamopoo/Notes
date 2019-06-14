@@ -9,7 +9,7 @@ async function sleep(interval) {
 }
 
 es6写法
-async const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 ```
 
 ## 使用
