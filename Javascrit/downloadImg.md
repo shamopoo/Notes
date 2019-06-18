@@ -1,6 +1,6 @@
 # js实现下载图片
 
-``` javascrit
+``` javascript
    /**
        * 获取 blob
        * @param  {String} url 目标文件地址
