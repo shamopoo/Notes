@@ -7,11 +7,9 @@ function getBlob(url) {
         xhr.open('GET', url, true);
         xhr.responseType = 'blob';
         xhr.onload = () => {
-        if (xhr.status === 200) {
-             resolve(xhr.response);
-        }
-   };
-   xhr.send();
+            if (xhr.status === 200) {resolve(xhr.response);}
+        };
+        xhr.send();
    });
 }
 function saveAs(blob, filename) {
