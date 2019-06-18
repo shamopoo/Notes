@@ -1,11 +1,6 @@
 # js实现下载图片
 
 ``` javascript
-   /**
-       * 获取 blob
-       * @param  {String} url 目标文件地址
-       * @return {Promise} 
-    */
     function Blob(url) {
           return new Promise(resolve => {
               const xhr = new XMLHttpRequest();
@@ -19,11 +14,6 @@
               xhr.send();
           });
       }
-      /**
-       * 保存
-       * @param  {Blob} blob     
-       * @param  {String} filename 想要保存的文件名称
-      */
       function saveAs(blob, filename) {
           if (window.navigator.msSaveOrOpenBlob) {
               navigator.msSaveBlob(blob, filename);
