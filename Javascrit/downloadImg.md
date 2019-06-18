@@ -6,7 +6,7 @@
        * @param  {String} url 目标文件地址
        * @return {Promise} 
     */
-    getBlob(url) {
+    function Blob(url) {
           return new Promise(resolve => {
               const xhr = new XMLHttpRequest();
               xhr.open('GET', url, true);
@@ -24,7 +24,7 @@
        * @param  {Blob} blob     
        * @param  {String} filename 想要保存的文件名称
       */
-      saveAs(blob, filename) {
+      function saveAs(blob, filename) {
           if (window.navigator.msSaveOrOpenBlob) {
               navigator.msSaveBlob(blob, filename);
           } else {
@@ -38,7 +38,6 @@
               a.click();
               body.removeChild(a);
               window.URL.revokeObjectURL(a.href);
-              this.sleep(500)
           }
       },
 
@@ -47,10 +46,18 @@
        * @param  {String} url 目标文件地址
        * @param  {String} filename 想要保存的文件名称
       */
-      download(url, filename) {
-          this.getBlob(url).then(blob => {
-              this.saveAs(blob, filename);
+      function download(url, filename) {
+          getBlob(url).then(blob => {
+              saveAs(blob, filename);
           });
       }
+
+```
+## 🌰
+
+``` javascript
+
+download('https://file.moetu.org/images/2019/05/15/avatorc8f6bbe92554aebd.jpg', '头像.png')
+``` javascript
 
 ```
