@@ -18,7 +18,7 @@
               };
               xhr.send();
           });
-      },
+      }
       /**
        * 保存
        * @param  {Blob} blob     
@@ -39,7 +39,7 @@
               body.removeChild(a);
               window.URL.revokeObjectURL(a.href);
           }
-      },
+      }
 
       /**
        * 下载
