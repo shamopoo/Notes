@@ -53,11 +53,11 @@
       }
 
 ```
-## 🌰
+## 举个🌰
 
 ``` javascript
 
 download('https://file.moetu.org/images/2019/05/15/avatorc8f6bbe92554aebd.jpg', '头像.png')
-``` javascript
+
 
 ```
