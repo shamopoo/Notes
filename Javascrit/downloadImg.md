@@ -1,13 +1,7 @@
 # js实现下载图片
 
 ``` javascript
-      /**
-       * 下载
-       * @param  {String} url 目标文件地址
-       * @param  {String} filename 想要保存的文件名称
-      */
-      function download(url, filename) {
-           function Blob(url) {
+       function getBlob(url) {
               return new Promise(resolve => {
                   const xhr = new XMLHttpRequest();
                   xhr.open('GET', url, true);
@@ -36,6 +30,12 @@
                   window.URL.revokeObjectURL(a.href);
               }
           }
+      /**
+       * 下载
+       * @param  {String} url 目标文件地址
+       * @param  {String} filename 想要保存的文件名称
+      */
+      function download(url, filename) {
           getBlob(url).then(blob => {
               saveAs(blob, filename);
           });
