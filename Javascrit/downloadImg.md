@@ -46,7 +46,7 @@
 
 ``` javascript
 
-download('https://file.moetu.org/images/2019/05/15/avatorc8f6bbe92554aebd.jpg', '头像.png')
+download('https://avatars0.githubusercontent.com/u/30898872?s=460&v=4', '头像.png')
 
 
 ```
