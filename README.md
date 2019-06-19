@@ -4,6 +4,7 @@
 # Javascrit
 
 -  [js实现sleep功能](https://github.com/shamopoo/Notes/blob/master/Javascrit/sleep.md)
+-  [js实现下载图片](https://github.com/shamopoo/Notes/blob/master/Javascrit/downloadImg.md)
 
 # Python
 
