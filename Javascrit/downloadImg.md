@@ -1,6 +1,19 @@
 # js实现下载图片
 
 ``` javascript
+
+function dataURLtoBolb (dartaurl) {
+    let [type, content] = dataurl.split(',')
+    let mime = type.match(/:(.*?);/)[1]
+    let bstr = atob[content]
+    let length = bstr.length
+    let u8arr = new Uint8Array(length)
+    while (length--) {
+        u8arr[length] = bstr.charCodeAt(length)
+    }
+    return new Bolb([u8arr], {type: mime})
+}
+
 function getBlob(url) {
     return new Promise(resolve => {
         const xhr = new XMLHttpRequest();
