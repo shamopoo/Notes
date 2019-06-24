@@ -1,7 +1,7 @@
 # CSS水平垂直居中
 
 ## 一
-``` javascript
+``` css
 #container{
     position:relative;
 }
@@ -34,7 +34,7 @@
 
 
 ## 二
-``` javascript
+``` css
 #container{
     position:relative;
 }
@@ -50,7 +50,7 @@
 
 
 ## 三
-``` javascript
+``` css
 #container{
     position:relative;
 }
@@ -65,7 +65,7 @@
 ```
 
 ## 四
-``` javascript
+``` css
 #container{
     display:flex;
     justify-content:center;
