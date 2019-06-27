@@ -236,40 +236,6 @@
 
 
 ``` javascript
-    // debounce防抖
-    function debounce (fn, delay) {
-        var self = this,
-              args = arguments
-              return function () {
-                    clearTimeout(fn.id)
-                    fn.id = setTimeout( function () {
-                        fn.call(self, args)
-                    }, dealy || 500)
-              }
-    }
-```
-
-``` javascript
-    // throttle 节流
-    function throttle (fn, delay) {
-        var slef = this,
-              timer = null,
-              args = arguments;
-              isImmediately = true
-              if (isImmediately) {
-                  fn.call(slef, args)
-                  isImmediately = false
-              }
-              if (timer) {clearTimeout(timer)}
-              timer = setTimeout(function () {
-                  timer = null
-                  fn.call(self, args)
-              }, delay || 500)
-    }
-
-```
-
-``` javascript
     //  1
     var z = 10
     function foo () {
@@ -315,23 +281,7 @@
     foo2() //  20
 ```
 
-``` javascript
 
-    // 手写new
-    function create () {
-        // 创建一个对象
-        var obj = new Object()
-        // 取出函数
-        var fn = Array.prototype.shift.call(arguments)
-        //  链接原型
-        obj.__proto__ = fn.prototype
-        // 绑定this
-        let result = fn.call(obj, arguments)
-        // 确定返回对象
-        return typeof result === 'object' ? result : obj
-    }
-    // var foo = create(foo2)
-```
 
 ``` javascript
    // 手写bind
