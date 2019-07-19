@@ -1,8 +1,8 @@
 ```javascript
    const person = {
-      namea: 'menglinghua',
+      name: 'menglinghua',
       say: function (){
-        return function (){
+        return function (){ // () =>
           console.log(this.name);
         };
       }
@@ -163,10 +163,10 @@
     var obj = {
        say: function () {
             function _say () {
-              console.log(this) // window
+              console.log(this)       // window
             }   
-            console.log(obj) // undefind
-            return _say.bind(obj) // obj 相当于null 默认绑定window
+            console.log(obj)          // undefind
+            return _say.bind(obj)    // obj 相当于null 默认绑定window
        }()
      }
      obj.say()
@@ -269,7 +269,7 @@
     console.log(F.b)  // b
 ```    
     
-    ``` javascript
+``` javascript
     var y = 10,
           foo2
     (function() {

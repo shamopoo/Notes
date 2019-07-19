@@ -3,8 +3,12 @@
 ## 网易 <br>
 - 介绍redux，主要解决什么问题 <br>
 - 文件上传如何做断点续传 <br>
+- https://www.zhangxinxu.com/wordpress/2013/11/xmlhttprequest-ajax-localstorage-%E6%96%87%E4%BB%B6%E6%96%AD%E7%82%B9%E7%BB%AD%E4%BC%A0/
 - 表单可以跨域吗 <br>
+- 可以，form 提交(submit函数)之后，是不会有任何数据返回的。你没机会读任何东西，所以可以认为是无害的，不在同源策略之内，但 Ajax 是有数据返回的。所以是浏览器认为是可能有害的。
 - promise、async有什么区别 <br>
+- async函数返回一个Promise对象。 await会阻塞的当前直到完成
+- Promise代码完全都是Promise的API（then、catch等等）,async / await 函数就是 Generator 函数的语法糖
 - 搜索请求如何处理（防抖） <br>
 - 搜索请求中文如何请求 <br>
 - 介绍观察者模式 <br>
@@ -79,6 +83,11 @@
 - Linux 754 介绍 <br>
 - 介绍冒泡排序，选择排序，冒泡排序如何优化 <br>
 - transform动画和直接使用left、top改变位置有什么优缺点 <br>
+top/left是布局类的样式，这个样式的变化会导致重排（reflow/relayout），所谓重排即指对这些节点以及受这些节点影响的其它节点，进行CSS计算->布局->重绘过程，这个过程的前2步是消耗大量资源的
+
+translate是一个绘制样式（这名词我瞎编的），这个样式的变化会导致重绘（repaint），即在屏幕上重新画一下，不会进行CSS计算和布局这2个性能大户，所以我们认为translate性能上要明显好于top/left
+
+translate3D传说因为走的是3D，所以能得到更完整的GPU加速的支持，在GPU中还有贴图缓存等手段帮你优化性能，所以更快
 - 如何判断链表是否有环 <br>
 - 介绍二叉搜索树的特点 <br>
 - 介绍暂时性死区 <br>
@@ -396,7 +405,7 @@
 - 介绍defineProperty方法，什么时候需要用到 <br>
 - for..in 和 object.keys的区别 <br>
 - 介绍闭包，使用场景 <br>
-- 使用闭包特权函数的使用场景 <br>
+- = <br>
 - get和post有什么区别 <br>
 - 百分点 <br>
 - React15/16.x的区别 <br>
