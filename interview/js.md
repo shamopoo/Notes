@@ -81,11 +81,14 @@
 
 
 ``` javascript
-  var users = [
-    { 'user': 'barney',  'age': 36, 'active': true },
-    { 'user': 'fred',    'age': 40, 'active': false },
-    { 'user': 'pebbles', 'age': 1,  'active': true }
+  let users = [
+    { id: 1, 'age': 36, 'active': true },
+    { id: 2,  'age': 40, 'active': false },
+    { id: 3, 'age': 1,  'active': true }
   ]
+  let list = [1,2]
+  let arr = []
+  users.filter(o => list.includes(o.id))
   users.find(o => o.age > 30) // barney
 
 ```
